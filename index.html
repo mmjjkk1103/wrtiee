@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Recommendations</title>
+    <title>로또 번호 추천기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Movie Recommendations</h1>
-    </header>
-    <main id="movie-container"></main>
-    <footer>
-        <p>&copy; 2024 Movie Recommendations</p>
-    </footer>
+    <main class="app">
+        <header class="site-header">
+            <div>
+                <p class="eyebrow">Lotto Number Picker</p>
+                <h1>로또 번호 추천기</h1>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="다크 모드로 변경">
+                <span id="theme-icon" aria-hidden="true">☾</span>
+                <span id="theme-label">다크</span>
+            </button>
+        </header>
+
+        <section class="generator" aria-labelledby="generator-title">
+            <div class="generator-copy">
+                <h2 id="generator-title">오늘의 번호 5세트</h2>
+                <p>버튼을 누르면 1부터 45까지 중복 없는 번호 6개를 5세트 추천합니다.</p>
+            </div>
+            <button class="generate-button" id="generate-button" type="button">번호 추천받기</button>
+        </section>
+
+        <section class="results" id="results" aria-live="polite"></section>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
